@@ -23,7 +23,6 @@ struct Contact
     string firstName = "", lastName = "", phoneNumber = "", email = "", address = "";
 };
 
-// Replaced cin >> variable operations with the following functions to avoid problems with reading data from the keyboard
 string loadLine()
 {
     string input = "";
@@ -996,9 +995,6 @@ int main()
         {
 
             if (contacts.empty() == true)
-                // We get lastContactId to optimize the program.
-                // Thanks to this, when the user adds a new contact
-                // we will not have to determine lastContactId again
                 lastContactId = loadContactsOfLoggedInUserFromFile(contacts, loggedInUserId);
 
             choice = chooseOptionFromUserMenu();
